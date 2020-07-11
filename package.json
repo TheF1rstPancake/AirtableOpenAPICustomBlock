@@ -1,0 +1,18 @@
+{
+    "dependencies": {
+        "@airtable/blocks": "0.0.52",
+        "isarray": "^2.0.5",
+        "react": "^16.13.0",
+        "react-dom": "^16.13.0",
+        "react-json-view": "^1.19.1",
+        "swagger-ui-react": "^3.28.0"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-plugin-react": "^7.18.3",
+        "eslint-plugin-react-hooks": "^2.5.0"
+    },
+    "scripts": {
+        "lint": "eslint frontend"
+    }
+}

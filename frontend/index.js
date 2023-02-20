@@ -12,6 +12,19 @@ import ReactJson from "react-json-view";
 import { css } from "./css";
 import React, { useState } from "react";
 
+const webpackConfig = {
+    resolve: {
+        fallback: {
+            buffer: require.resolve('buffer/'),
+        },
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
+    ],
+};
+
 loadCSSFromString(css);
 
 function AirtableToOpenAPI() {

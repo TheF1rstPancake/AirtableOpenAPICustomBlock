@@ -11,8 +11,19 @@ import ReactJson from "react-json-view";
 
 import { css } from "./css";
 import React, { useState } from "react";
-import { Buffer } from 'buffer';
-global.Buffer = Buffer;
+
+const webpackConfig = {
+    resolve: {
+        fallback: {
+            buffer: require.resolve('buffer/'),
+        },
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
+    ],
+};
 
 loadCSSFromString(css);
 

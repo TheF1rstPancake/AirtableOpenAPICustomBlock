@@ -11,8 +11,8 @@ import ReactJson from "react-json-view";
 
 import { css } from "./css";
 import React, { useState } from "react";
-import {Buffer} from 'buffer';
-Buffer.from('anything','base64');
+import { Buffer } from 'buffer';
+global.Buffer = Buffer;
 
 loadCSSFromString(css);
 
